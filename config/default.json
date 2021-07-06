@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://prachi:prachim@cluster0.qkgl9.mongodb.net/userauth"
+    "mongoURI": "mongodb+srv://prachi:prachim@cluster0.qkgl9.mongodb.net/userauth",
+    "jwtSecret": "auth_secret"
 }

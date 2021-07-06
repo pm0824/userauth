@@ -6,7 +6,14 @@ const app = express();
 //Connect database
 connectDB();
 
-app.get('/',(req,res)=> res.json({msg:"Hello World!"}));
+//Init middleware
+app.use(express.json({extended:false}));        //bodyparser
+
+//app.get('/',(req,res)=> res.json({msg:"Hello World!"}));
+
+//Define Routes
+app.use('/api/users',require('./routes/users'));
+app.use('/api/auth',require('./routes/auth'));
 
 const PORT = process.env.PORT || 5000;
 
