@@ -10,7 +10,7 @@ const User = require('../models/User');
 //@desc     User Registration
 //@access   Public
 router.post('/', async (req,res)=>{
-    const { name,email,password } = req.body;
+    const { email,password } = req.body;
 
     try {
         let user = await User.findOne({email});
@@ -18,7 +18,6 @@ router.post('/', async (req,res)=>{
             return res.status(400).json({msg:'User already exist'});
         }
         user = new User({
-            name,
             email,
             password
         });

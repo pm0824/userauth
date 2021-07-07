@@ -7,7 +7,7 @@ const app = express();
 connectDB();
 
 //Init middleware
-app.use(express.json({extended:false}));        //bodyparser
+app.use(express.json({extended:false}));        //bodyparser-Used to parse JSON bodies
 
 //app.get('/',(req,res)=> res.json({msg:"Hello World!"}));
 
